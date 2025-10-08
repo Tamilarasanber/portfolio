@@ -1,21 +1,38 @@
 import React, { useState } from "react";
 import SectionTitle from "./SectionTitle";
-import { 
-  FaReact, FaJs, FaHtml5, FaCss3Alt, FaNodeJs, FaGitAlt, FaCode, FaGithub, FaPalette   
-} from "react-icons/fa";
 
+// Image imports
+import ReactIcons from '../assets/icons/react.png';
+import bootstrapIcons from '../assets/icons/bootstrap.png';
+import css3Icons from '../assets/icons/css3.png';
+import cursorIcons from '../assets/icons/cursor.png';
+import gitIcons from '../assets/icons/git.png';
+import githubIcons from '../assets/icons/github.png';
+import html5Icons from '../assets/icons/html5.png';
+import javascriptIcons from '../assets/icons/javascript.png';
+import jqueryIcons from '../assets/icons/jquery.png';
+import nodejsIcons from '../assets/icons/nodejs.png';
+import reduxIcons from '../assets/icons/redux.png';
+import tailwindIcons from '../assets/icons/tailwind.png';
+import viteIcons from '../assets/icons/vite.png';
+import vscodeIcons from '../assets/icons/vscode.png';
 
-// Map each skill to its icon component
-const icons = {
-  React: FaReact,
-  "Node.js": FaNodeJs,
-  Git: FaGitAlt,
-  "VS Code": FaCode,
-  "JavaScript (ES6+)": FaJs,
-  HTML5: FaHtml5,
-  CSS3: FaCss3Alt,
-  GitHub: FaGithub,
-  "Tailwind CSS": FaPalette
+// Map each skill to its image
+const skillImages = {
+  React: ReactIcons,
+  Redux: reduxIcons,
+  "JavaScript (ES6+)": javascriptIcons,
+  jQuery: jqueryIcons,
+  "Tailwind CSS": tailwindIcons,
+  Bootstrap: bootstrapIcons,
+  CSS3: css3Icons,
+  HTML5: html5Icons,
+  "Node.js": nodejsIcons,
+  Vite: viteIcons,
+  GitHub: githubIcons,
+  Git: gitIcons,
+  "VS Code": vscodeIcons,
+  Cursor: cursorIcons
 };
 
 // Skills organized by category
@@ -30,15 +47,13 @@ const skills = {
     { name: "CSS3" },
     { name: "HTML5" }
   ],
-  Backend: [
-    { name: "Node.js" }
-  ],
+  Backend: [{ name: "Node.js" }],
   Tools: [
     { name: "Vite" },
     { name: "GitHub" },
     { name: "Git" },
     { name: "VS Code" },
-    { name: "Cursor"}
+    { name: "Cursor" }
   ]
 };
 
@@ -89,13 +104,21 @@ const Skills = () => {
         {/* Skills Grid */}
         <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
           {skillsMap[active].map(skill => {
-            const Icon = icons[skill.name]; // get the icon component
+            const imgSrc = skillImages[skill.name];
             return (
               <li 
                 key={skill.name} 
                 className="flex flex-col items-center rounded-md border bg-white px-4 py-5 text-center shadow-sm hover:shadow-lg transition"
               >
-                {Icon ? <Icon className="text-5xl mb-2 text-indigo-600" /> : <span className="text-5xl mb-2">💡</span>}
+                {imgSrc ? (
+                  <img 
+                    src={imgSrc} 
+                    alt={skill.name} 
+                    className="w-16 h-16 mb-3 object-contain" 
+                  />
+                ) : (
+                  <span className="text-5xl mb-2">💡</span>
+                )}
                 <span className="font-semibold">{skill.name}</span>
               </li>
             );
