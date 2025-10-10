@@ -4,13 +4,13 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b">
+    <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur">
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
         <a href="#home" className="text-xl font-bold">Portfolio</a>
 
         {/* Hamburger for mobile */}
         <button
-          className="md:hidden p-2 rounded hover:bg-gray-200 focus:outline-none"
+          className="md:hidden p-2 rounded hover:bg-gray-200 focus:outline-none transition"
           aria-label="Toggle menu"
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((o) => !o)}
@@ -22,7 +22,7 @@ const Navbar = () => {
             </svg>
           ) : (
             <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8h16M4 16h16"/>
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16"/>
             </svg>
           )}
         </button>

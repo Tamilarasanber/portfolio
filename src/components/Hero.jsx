@@ -1,6 +1,6 @@
-import myprofileimg from '../assets/MyProfile.jpg'
-import Resume from '../assets/Tamilarasan-Resume.pdf'
-
+import { FaGithub, FaLinkedin, FaFileAlt } from 'react-icons/fa'; // react-icons
+import myprofileimg from '../assets/MyProfile.jpg';
+import Resume from '../assets/Tamilarasan_Resume.pdf';
 
 const Hero = () => (
   <section id="home" className="relative">
@@ -28,28 +28,54 @@ const Hero = () => (
             Contact Me
           </a>
         </div>
-        <div className="mt-6 flex items-center gap-4 text-gray-600">
-          <a className="hover:text-indigo-600 underline" href="https://github.com/Tamilarasanber" aria-label="GitHub" target='_blank'>
-            GitHub
-          </a>
-          <a className="hover:text-indigo-600 underline" href="https://www.linkedin.com/in/tamilarasan-ber/" aria-label="LinkedIn" target='_blank'>
-            LinkedIn
-          </a>
-          <a className="hover:text-indigo-600 underline" href={Resume} aria-label="Resume">
-            Resume
-          </a>
-        </div>
       </div>
+
       <div className="relative">
         <div className="aspect-square rounded-2xl bg-gradient-to-tr from-indigo-200 via-purple-200 to-pink-200 p-1">
-          <div className="h-full w-full rounded-2xl bg-white flex items-center justify-center">
-           <img src={myprofileimg} alt="myprofile" />
+          <div className="h-full w-full rounded-2xl flex items-center justify-center overflow-hidden">
+            <img src={myprofileimg} alt="myprofile" className="h-full w-full object-cover" />
           </div>
         </div>
+
+        {/* Social + Resume icons below the image */}
+        <div className="mt-5 flex items-center gap-5 justify-center">
+          <a
+            href="https://github.com/Tamilarasanber"
+            aria-label="GitHub"
+            target="_blank"
+            rel="noreferrer"
+            className="text-gray-700 hover:text-indigo-600 transition-colors"
+            title="GitHub"
+          >
+            <FaGithub className="h-7 w-7" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/tamilarasan-ber/"
+            aria-label="LinkedIn"
+            target="_blank"
+            rel="noreferrer"
+            className="text-gray-700 hover:text-indigo-600 transition-colors"
+            title="LinkedIn"
+          >
+            <FaLinkedin className="h-7 w-7" />
+          </a>
+          <a
+            href={Resume}
+            aria-label="Resume PDF"
+            target="_blank"
+            rel="noreferrer"
+            className="text-gray-700 hover:text-indigo-600 transition-colors"
+            title="Resume"
+          >
+            <FaFileAlt className="h-7 w-7" />
+          </a>
+        </div>
+
         <div aria-hidden="true" className="absolute -bottom-6 -left-6 h-24 w-24 rounded-full bg-indigo-100" />
         <div aria-hidden="true" className="absolute -top-6 -right-6 h-16 w-16 rounded-full bg-purple-100" />
       </div>
     </div>
   </section>
 );
+
 export default Hero;
