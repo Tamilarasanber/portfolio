@@ -72,7 +72,7 @@ const Hero = () => (
         </div>
 
         <div aria-hidden="true" className="absolute -bottom-6 -left-6 h-24 w-24 rounded-full bg-indigo-100" />
-        <div aria-hidden="true" className="absolute -top-6 -right-6 h-16 w-16 rounded-full bg-purple-100" />
+        <div aria-hidden="true" className="absolute -top-6 -right-4 h-16 w-16 rounded-full bg-purple-100" />
       </div>
     </div>
   </section>
