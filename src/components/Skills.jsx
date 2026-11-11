@@ -16,6 +16,8 @@ import reduxIcons from '../assets/icons/redux.png';
 import tailwindIcons from '../assets/icons/tailwind.png';
 import viteIcons from '../assets/icons/vite.png';
 import vscodeIcons from '../assets/icons/vscode.png';
+import postgreIcons from '../assets/icons/postgre.png';
+import springIcons from '../assets/icons/Spring.png';
 
 // Map each skill to its image
 const skillImages = {
@@ -32,7 +34,9 @@ const skillImages = {
   GitHub: githubIcons,
   Git: gitIcons,
   "VS Code": vscodeIcons,
-  Cursor: cursorIcons
+  Cursor: cursorIcons,
+  Postgres: postgreIcons,
+  "Spring Boot": springIcons,
 };
 
 // Skills organized by category
@@ -47,13 +51,18 @@ const skills = {
     { name: "CSS3" },
     { name: "HTML5" }
   ],
-  Backend: [{ name: "Node.js" }],
+  Backend: [
+    { name: "Node.js" },
+    { name: "Postgres" },
+    { name: "Spring Boot" }
+  ],
   Tools: [
     { name: "Vite" },
     { name: "GitHub" },
     { name: "Git" },
     { name: "VS Code" },
     { name: "Cursor" }
+    
   ]
 };
 

@@ -9,10 +9,13 @@ const Hero = () => (
       <div>
         <p className="text-sm uppercase tracking-widest text-indigo-600">Portfolio</p>
         <h1 className="mt-3 text-4xl md:text-5xl font-bold leading-tight">
-          Hi, <span className="text-indigo-600">I’m Tamilarasan</span> Associate Developer
+          Hi, <span className="text-indigo-600">I’m Tamilarasan</span> Software Engineer
         </h1>
         <p className="mt-4 text-gray-700">
-          I build modern, responsive, and scalable web applications with React.js, Node.js, Tailwind CSS, and JavaScript. Passionate about creating clean UI/UX and bringing ideas to life through code.
+          I build modern, responsive, and scalable web applications using React.js, Redux, JavaScript, Java, and Spring Boot.
+        </p>
+        <p className="mt-4 text-gray-700">
+          With 4+ years of professional experience, I specialize in developing user-friendly frontend interfaces, integrating REST APIs, and building full-stack application features.
         </p>
         <div className="mt-6 flex items-center gap-3">
           <a
